@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKOUT ADDA ELITE | The Luxury Gym in Mahesh Nagar, Jaipur</title>
+    <meta name="description" content="Redefining Fitness, Redefining You. Experience Jaipur's premier 4.9-star luxury gym in Mahesh Nagar & Gopal Pura Mode featuring modern machines, ice & steam baths, and complimentary detox refreshments.">
+    
+    <!-- Google Fonts: Cinzel for Luxury Editorial Display & Plus Jakarta Sans for Crisp UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Crisp Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#08080a',
+                        charcoal: '#111115',
+                        card: '#16161c',
+                        gold: {
+                            300: '#f5d77f',
+                            400: '#e5be53',
+                            500: '#d4af37',
+                            600: '#b59024',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2.5s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Luxury Scrollbar & Subtle Effects */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #08080a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        body {
+            background-color: #08080a;
+            color: #f4f4f5;
+            overflow-x: hidden;
+        }
+
+        /* Gold Foil Text Gradient */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #fceabb 0%, #d4af37 45%, #f5d77f 75%, #aa821c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Gold Shimmer Button */
+        .btn-gold {
+            background: linear-gradient(110deg, #d4af37 0%, #f5d77f 45%, #d4af37 60%, #b59024 100%);
+            background-size: 200% 100%;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-gold:hover {
+            background-position: 100% 0;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+            transform: translateY(-2px);
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(22, 22, 28, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.12);
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* Ambient Background Grid */
+        .luxury-grid {
+            background-image: 
+                linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+            background-size: 64px 64px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-obsidian">
+
+    <!-- Top Live Status Bar -->
+    <div class="bg-charcoal border-b border-white/5 text-xs py-2 px-4 text-zinc-300 relative z-50">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="relative flex h-2 w-2">
+                    <span id="liveStatusPing" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span id="liveStatusDot" class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span id="liveStatusText" class="font-medium text-emerald-400">Open Now · Closes 10:00 PM</span>
+                <span class="hidden sm:inline text-zinc-600">|</span>
+                <span class="hidden sm:inline text-zinc-400"><i class="fa-solid fa-location-dot text-gold-500 mr-1"></i> Mahesh Nagar, Gopal Pura Mode, Jaipur</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1 text-gold-400 font-semibold">
+                    <i class="fa-solid fa-star"></i> 4.9 <span class="text-zinc-400 font-normal">(169 Google Reviews)</span>
+                </span>
+                <a href="tel:+919680038787" class="hover:text-gold-400 transition-colors font-medium">
+                    <i class="fa-solid fa-phone text-gold-500 mr-1"></i> 096800 38787
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Luxury Navbar -->
+    <header id="navbar" class="sticky top-0 z-40 transition-all duration-300 bg-obsidian/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Identity -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-obsidian font-display font-extrabold text-xl shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform">
+                        W
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-lg sm:text-xl tracking-wider text-white block leading-none">
+                            WORKOUT ADDA <span class="text-gold-400">ELITE</span>
+                        </span>
+                        <span class="text-[10px] uppercase tracking-[0.28em] text-zinc-400 block mt-1">
+                            The Luxury Gym · Jaipur
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                    <a href="#experience" class="hover:text-gold-400 transition-colors">The Experience</a>
+                    <a href="#facilities" class="hover:text-gold-400 transition-colors">Facilities</a>
+                    <a href="#recovery" class="hover:text-gold-400 transition-colors">Ice &amp; Steam Suite</a>
+                    <a href="#reviews" class="hover:text-gold-400 transition-colors">Member Reviews</a>
+                    <a href="#location" class="hover:text-gold-400 transition-colors">Location</a>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-3">
+                    <a href="#vip-pass" class="btn-gold text-obsidian font-bold text-xs sm:text-sm px-5 py-3 rounded-xl tracking-wide shadow-lg">
+                        Book Free VIP Trial
+                    </a>
+                    <button id="mobileMenuBtn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-white/5 text-zinc-200 hover:text-gold-400 border border-white/10">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-charcoal/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#experience" class="mobile-link block text-base font-medium text-zinc-200 hover:text-gold-400 py-2">The Experience</a>
+            <a href="#facilities" class="mobile-link block text-base font-medium text-zinc-200 hover:text-gold-400 py-2">Luxury Facilities</a>
+            <a href="#recovery" class="mobile-link block text-base font-medium text-zinc-200 hover:text-gold-400 py-2">Ice &amp; Steam Recovery</a>
+            <a href="#reviews" class="mobile-link block text-base font-medium text-zinc-200 hover:text-gold-400 py-2">4.9★ Google Reviews</a>
+            <a href="#location" class="mobile-link block text-base font-medium text-zinc-200 hover:text-gold-400 py-2">Mahesh Nagar Location</a>
+            <div class="pt-3 border-t border-white/10 flex gap-3">
+                <a href="tel:+919680038787" class="flex-1 text-center py-3 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-white">
+                    <i class="fa-solid fa-phone text-gold-400 mr-2"></i> Call Desk
+                </a>
+                <a href="#vip-pass" class="mobile-link flex-1 text-center py-3 rounded-xl btn-gold text-obsidian text-sm font-bold">
+                    Claim Free Pass
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[92vh] flex items-center luxury-grid overflow-hidden pt-10 pb-20">
+        <!-- Ambient Radial Glows -->
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-gold-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-[30rem] h-[30rem] bg-amber-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Editorial Column -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.04] border border-gold-500/30 text-gold-300 text-xs sm:text-sm font-medium tracking-wide reveal active">
+                        <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                        Jaipur's Highest-Rated Luxury Fitness Sanctuary
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-[4.25rem] leading-[1.08] tracking-tight text-white reveal active reveal-delay-1">
+                        Redefining Fitness.<br>
+                        <span class="text-gold-gradient">Redefining You.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed font-light reveal active reveal-delay-2">
+                        Step into <strong class="text-white font-semibold">Workout Adda Elite</strong>—Mahesh Nagar &amp; Gopal Pura Mode’s premier destination for precision strength biomechanics, rejuvenating <span class="text-gold-400">Ice &amp; Steam Bath therapy</span>, and an immaculate, high-energy training atmosphere.
+                    </p>
+
+                    <!-- Primary & Secondary CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 reveal active reveal-delay-3">
+                        <a href="#vip-pass" class="btn-gold text-obsidian font-bold px-8 py-4 rounded-xl text-center text-base flex items-center justify-center gap-2.5 shadow-2xl">
+                            <span>Claim Your Complimentary VIP Session</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#facilities" class="px-8 py-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white font-semibold text-center text-base transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-dumbbell text-gold-400"></i>
+                            <span>Explore The Club</span>
+                        </a>
+                    </div>
+
+                    <!-- Verified Social Proof Metrics -->
+                    <div class="grid grid-cols-3 gap-4 sm:gap-8 pt-8 border-t border-white/10 reveal active reveal-delay-3">
+                        <div>
+                            <div class="flex items-baseline gap-1">
+                                <span class="font-display font-bold text-2xl sm:text-4xl text-white counter" data-target="4.9" data-decimals="1">0.0</span>
+                                <i class="fa-solid fa-star text-gold-400 text-sm sm:text-lg"></i>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Google Rating</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-1">
+                                <span class="font-display font-bold text-2xl sm:text-4xl text-white counter" data-target="169" data-decimals="0">0</span>
+                                <span class="text-gold-400 font-bold text-lg">+</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Verified Reviews</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-1">
+                                <span class="font-display font-bold text-2xl sm:text-4xl text-gold-400">10 PM</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Open Daily Till</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Luxury Visual Showcase Card -->
+                <div class="lg:col-span-5 relative reveal active reveal-delay-2">
+                    <div class="relative rounded-3xl overflow-hidden border border-gold-500/25 shadow-2xl bg-charcoal group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85" 
+                            onerror="this.src='https://placehold.co/800x950/111115/d4af37?text=WORKOUT+ADDA+ELITE'"
+                            alt="Workout Adda Elite Luxury Gym Floor in Jaipur" 
+                            class="w-full h-[460px] sm:h-[540px] object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-85"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+
+                        <!-- Top Floating Badge -->
+                        <div class="absolute top-5 left-5 right-5 flex items-center justify-between">
+                            <span class="px-3.5 py-1.5 rounded-full bg-obsidian/80 backdrop-blur-md border border-white/10 text-xs font-semibold text-gold-300 flex items-center gap-2">
+                                <i class="fa-solid fa-crown text-gold-400"></i> Elite Luxury Standard
+                            </span>
+                            <span class="px-3.5 py-1.5 rounded-full bg-obsidian/80 backdrop-blur-md border border-white/10 text-xs font-medium text-zinc-200">
+                                <i class="fa-solid fa-heart text-rose-400 mr-1"></i> LGBTQ+ Friendly
+                            </span>
+                        </div>
+
+                        <!-- Bottom Floating Highlight Card -->
+                        <div class="absolute bottom-5 left-5 right-5 glass-card rounded-2xl p-5 animate-float">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <p class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Signature Member Perks</p>
+                                    <h3 class="text-white font-bold text-lg mt-1">Ice Bath, Steam &amp; Detox Bar</h3>
+                                    <p class="text-zinc-300 text-xs mt-1 leading-relaxed">
+                                        Complimentary freshly brewed Lemon Tea &amp; infused Detox Water included with your training experience.
+                                    </p>
+                                </div>
+                                <div class="w-11 h-11 rounded-xl bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0">
+                                    <i class="fa-solid fa-snowflake text-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Experience / Philosophy Strip -->
+    <section id="experience" class="py-20 bg-charcoal border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 reveal">
+                <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.25em]">The Elite Standard</span>
+                <h2 class="font-display font-bold text-3xl sm:text-5xl text-white">
+                    Where Perfection Meets Passion
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed">
+                    Designed for Jaipur’s driven professionals, athletes, and fitness enthusiasts. Every square foot of Workout Adda Elite is engineered to eliminate distractions and elevate your performance.
+                </p>
+            </div>
+
+            <!-- 3 Core Pillars -->
+            <div class="grid md:grid-cols-3 gap-6 mt-14">
+                <div class="glass-card rounded-2xl p-8 reveal reveal-delay-1 tilt-card">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-6">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Biomechanical Precision</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Train on a curated fleet of modern, impeccably maintained strength and cardio machines engineered for optimal muscle isolation and joint safety.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 reveal reveal-delay-2 tilt-card">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-6">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Luxury Recovery &amp; Care</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Accelerate muscle repair with contrast <strong class="text-zinc-200">Ice &amp; Steam Bath</strong> sessions and rehydrate at our complimentary Lemon Tea &amp; Detox Water lounge.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 reveal reveal-delay-3 tilt-card">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Hygienic &amp; Supportive</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Rated 4.9★ across 169 reviews for spotless hygiene, uplifting high-energy vibes, and certified trainers who genuinely invest in your transformation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Facilities & Amenities Grid -->
+    <section id="facilities" class="py-24 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+                <div>
+                    <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.25em]">World-Class Infrastructure</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-5xl text-white mt-2">
+                        Luxury Amenities &amp; Zones
+                    </h2>
+                </div>
+                <p class="text-zinc-400 max-w-md text-sm sm:text-base">
+                    Everything you need under one roof in Mahesh Nagar—with transparent, accessible membership tiers.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Facility 1 -->
+                <div class="glass-card rounded-2xl p-7 group reveal">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-gold-500 group-hover:text-obsidian text-gold-400 flex items-center justify-center text-xl transition-colors">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </span>
+                        <span class="text-xs font-semibold text-zinc-500 group-hover:text-gold-400 transition-colors">01</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Modern Strength &amp; Cardio</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Heavy-duty plate-loaded stations, calibrated free weights, functional turf, and next-gen interactive cardio consoles.
+                    </p>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="glass-card rounded-2xl p-7 group reveal reveal-delay-1">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-gold-500 group-hover:text-obsidian text-gold-400 flex items-center justify-center text-xl transition-colors">
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </span>
+                        <span class="text-xs font-semibold text-zinc-500 group-hover:text-gold-400 transition-colors">02</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Ice Bath &amp; Steam Therapy</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Reduce inflammation, boost circulation, and unwind post-workout in our dedicated luxury thermal recovery suites.
+                    </p>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="glass-card rounded-2xl p-7 group reveal reveal-delay-2">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-gold-500 group-hover:text-obsidian text-gold-400 flex items-center justify-center text-xl transition-colors">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </span>
+                        <span class="text-xs font-semibold text-zinc-500 group-hover:text-gold-400 transition-colors">03</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Complimentary Wellness Bar</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Enjoy complimentary antioxidant-rich Lemon Tea and refreshing infused Detox Water crafted daily for our members.
+                    </p>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="glass-card rounded-2xl p-7 group reveal">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-gold-500 group-hover:text-obsidian text-gold-400 flex items-center justify-center text-xl transition-colors">
+                            <i class="fa-solid fa-user-check"></i>
+                        </span>
+                        <span class="text-xs font-semibold text-zinc-500 group-hover:text-gold-400 transition-colors">04</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Supportive Elite Trainers</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Friendly, attentive floor coaches and personal trainers offering tailored workout programming, form correction, and nutrition guidance.
+                    </p>
+                </div>
+
+                <!-- Facility 5 -->
+                <div class="glass-card rounded-2xl p-7 group reveal reveal-delay-1">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-gold-500 group-hover:text-obsidian text-gold-400 flex items-center justify-center text-xl transition-colors">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </span>
+                        <span class="text-xs font-semibold text-zinc-500 group-hover:text-gold-400 transition-colors">05</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Immaculate Hygiene</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Continuous equipment sanitization, fresh air circulation, and spotless locker rooms ensure a pristine training environment.
+                    </p>
+                </div>
+
+                <!-- Facility 6 -->
+                <div class="glass-card rounded-2xl p-7 group reveal reveal-delay-2">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-gold-500 group-hover:text-obsidian text-gold-400 flex items-center justify-center text-xl transition-colors">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        <span class="text-xs font-semibold text-zinc-500 group-hover:text-gold-400 transition-colors">06</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Inclusive Luxury Community</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        A welcoming, LGBTQ+ friendly, and ego-free sanctuary where beginners and seasoned lifters alike thrive together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight Feature: Luxury Recovery Suite -->
+    <section id="recovery" class="py-24 bg-charcoal border-y border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 lg:p-16 border-gold-500/20 relative overflow-hidden reveal">
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid lg:grid-cols-12 gap-10 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-widest">
+                            Exclusive Contrast Therapy
+                        </span>
+                        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+                            Train Hard. Recover Like Royalty.
+                        </h2>
+                        <p class="text-zinc-300 text-base leading-relaxed">
+                            True transformation happens during recovery. Unlike ordinary gyms in Jaipur, <strong class="text-white">Workout Adda Elite</strong> integrates contrast <span class="text-gold-400 font-semibold">Ice Bath</span> and <span class="text-gold-400 font-semibold">Steam Bath</span> suites directly into your fitness lifestyle—followed by complimentary Lemon Tea and Detox Water.
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 rounded-2xl bg-obsidian/70 border border-white/5">
+                                <div class="flex items-center gap-3 text-sky-400 font-bold mb-1">
+                                    <i class="fa-solid fa-icicles"></i>
+                                    <span>Cold Plunge Ice Bath</span>
+                                </div>
+                                <p class="text-xs text-zinc-400 leading-relaxed">Flushes lactic acid, sharpens mental focus, and accelerates deep muscle recovery.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-obsidian/70 border border-white/5">
+                                <div class="flex items-center gap-3 text-amber-400 font-bold mb-1">
+                                    <i class="fa-solid fa-cloud"></i>
+                                    <span>Aromatic Steam Suite</span>
+                                </div>
+                                <p class="text-xs text-zinc-400 leading-relaxed">Opens pores, detoxifies skin, relieves joint stiffness, and melts away daily stress.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+                            <img 
+                                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=85" 
+                                onerror="this.src='https://placehold.co/700x600/16161c/d4af37?text=ICE+%26+STEAM+RECOVERY'"
+                                alt="Luxury Spa and Steam Recovery Suite" 
+                                class="w-full h-80 sm:h-96 object-cover"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-transparent to-transparent flex items-end p-6">
+                                <div class="flex items-center justify-between w-full">
+                                    <div>
+                                        <p class="text-white font-bold text-sm">Included for Elite Members</p>
+                                        <p class="text-gold-400 text-xs">Reasonable &amp; Transparent Membership Plans</p>
+                                    </div>
+                                    <a href="#vip-pass" class="px-4 py-2 rounded-xl btn-gold text-obsidian text-xs font-bold">
+                                        Enquire Rates
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verified Google Reviews Showcase (4.9★ / 169 Reviews) -->
+    <section id="reviews" class="py-24 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-sm">
+                    <i class="fa-brands fa-google text-gold-400"></i>
+                    <span class="font-bold text-white">4.9 / 5.0</span>
+                    <span class="text-gold-400">★★★★★</span>
+                    <span class="text-zinc-400">· 169 Verified Reviews</span>
+                </div>
+                <h2 class="font-display font-bold text-3xl sm:text-5xl text-white">
+                    Loved By Jaipur’s Fitness Community
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Real words from our verified Google reviewers in Mahesh Nagar &amp; Gopal Pura Mode.
+                </p>
+
+                <!-- Highlight Pills from Google Summary -->
+                <div class="flex flex-wrap justify-center gap-2 pt-2">
+                    <span class="px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/25 text-gold-300 text-xs font-medium">Luxury Gym (12)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">Supportive Trainers (8)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">Premium Machines (7)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">Hygienic Gym (4)</span>
+                </div>
+            </div>
+
+            <!-- Review Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-6 mt-14">
+                <!-- Review 1: Akshay Kumar Neemroth -->
+                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-gold-400 text-sm gap-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                                Local Guide
+                            </span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed italic">
+                            “I've been working out at Workout Adda Elite in Mahesh Nagar for almost 3 months now, and honestly, it’s easily one of the best gyms in this part of Jaipur. Located near Mahesh Nagar Phatak, the place has a fantastic, high-energy vibe.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-amber-600 flex items-center justify-center text-obsidian font-bold text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Akshay Kumar Neemroth</h4>
+                            <p class="text-zinc-500 text-xs">Local Guide · 122 reviews · 2 months ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2: Shivansh -->
+                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between reveal reveal-delay-1 border-gold-500/30">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-gold-400 text-sm gap-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-gold-500/15 text-gold-300 border border-gold-500/30 font-medium">
+                                Verified Member
+                            </span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed italic">
+                            “Workout Adda Elite – Redefining Fitness, Redefining You. Welcome to Workout Adda Elite, a name that speaks for perfection, passion, and truly luxury training standards in Jaipur.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-800 border border-gold-500/40 flex items-center justify-center text-gold-400 font-bold text-sm">
+                            SH
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Shivansh</h4>
+                            <p class="text-zinc-500 text-xs">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3: Avni Jaiman -->
+                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between reveal reveal-delay-2">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-gold-400 text-sm gap-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                                Verified Member
+                            </span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed italic">
+                            “Best gym I have ever been to! I like this place very much—the atmosphere here is amazing. The trainers here are really good and very friendly too. I hope you all visit this gym for sure!”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-amber-600 flex items-center justify-center text-obsidian font-bold text-sm">
+                            AJ
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Avni Jaiman</h4>
+                            <p class="text-zinc-500 text-xs">Verified Google Reviewer · 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive VIP Free Trial & Membership Pass Generator -->
+    <section id="vip-pass" class="py-24 bg-charcoal border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Form -->
+                <div class="lg:col-span-6 space-y-6 reveal">
+                    <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.25em]">Complimentary Experience</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+                        Generate Your Instant VIP Guest Pass
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        Experience our luxury gym floor, meet our certified trainers, and enjoy a complimentary detox drink before you commit. Fill in your details to generate your digital pass and send it directly to our front desk on WhatsApp.
+                    </p>
+
+                    <form id="vipPassForm" class="space-y-4 pt-2">
+                        <div>
+                            <label for="guestName" class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Full Name *</label>
+                            <input type="text" id="guestName" required placeholder="e.g., Aarav Sharma"
+                                class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-gold-500 transition-colors">
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="guestPhone" class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Mobile Number *</label>
+                                <input type="tel" id="guestPhone" required placeholder="e.g., 98290 XXXXX"
+                                    class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-gold-500 transition-colors">
+                            </div>
+                            <div>
+                                <label for="guestGoal" class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Primary Fitness Goal</label>
+                                <select id="guestGoal"
+                                    class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-white/10 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                    <option value="Strength & Hypertrophy">Strength &amp; Hypertrophy</option>
+                                    <option value="Fat Loss & Conditioning">Fat Loss &amp; Conditioning</option>
+                                    <option value="Luxury Gym + Ice & Steam Bath">Luxury Gym + Ice &amp; Steam Bath</option>
+                                    <option value="1-on-1 Personal Training">1-on-1 Personal Training</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="guestTime" class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Preferred Visit Window</label>
+                            <select id="guestTime"
+                                class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-white/10 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                <option value="Morning (6:00 AM – 11:00 AM)">Morning (6:00 AM – 11:00 AM)</option>
+                                <option value="Afternoon (12:00 PM – 4:00 PM)">Afternoon (12:00 PM – 4:00 PM)</option>
+                                <option value="Evening Peak (5:00 PM – 10:00 PM)">Evening Peak (5:00 PM – 10:00 PM)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full btn-gold text-obsidian font-bold py-4 rounded-xl text-base shadow-xl flex items-center justify-center gap-2 mt-2">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span>Activate My Free VIP Trial Pass</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Live Digital VIP Pass Preview -->
+                <div class="lg:col-span-6 reveal reveal-delay-2">
+                    <div id="digitalPassCard" class="relative rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-[#1b1b22] via-[#111115] to-[#08080a] border border-gold-500/40 shadow-2xl overflow-hidden">
+                        <!-- Decorative Metallic Corner Accent -->
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/15 rounded-bl-full pointer-events-none"></div>
+                        
+                        <div class="flex items-center justify-between border-b border-white/10 pb-6">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-gold-400 font-bold block">Official Guest Privilege</span>
+                                <h3 class="font-display font-bold text-xl sm:text-2xl text-white mt-1">WORKOUT ADDA ELITE</h3>
+                            </div>
+                            <div class="px-3 py-1 rounded-lg bg-gold-500/20 border border-gold-500/40 text-gold-300 font-mono text-xs font-bold">
+                                #WAE-VIP-2026
+                            </div>
+                        </div>
+
+                        <div class="py-7 space-y-5">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-wider text-zinc-500 block">Issued To</span>
+                                    <p id="passHolderName" class="text-white font-bold text-lg mt-0.5 truncate">Valued Guest</p>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-wider text-zinc-500 block">Access Level</span>
+                                    <p class="text-gold-400 font-semibold text-sm mt-1">1-Day All-Access + Detox Bar</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-wider text-zinc-500 block">Focus Area</span>
+                                    <p id="passHolderGoal" class="text-zinc-200 text-sm font-medium mt-0.5">Strength &amp; Hypertrophy</p>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-wider text-zinc-500 block">Preferred Window</span>
+                                    <p id="passHolderTime" class="text-zinc-200 text-sm font-medium mt-0.5">Evening (5 PM – 10 PM)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-dashed border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="text-xs text-zinc-400">
+                                <p class="text-white font-semibold">Mahesh Nagar, Gopal Pura Mode</p>
+                                <p>Valid Daily Until 10:00 PM</p>
+                            </div>
+                            <a id="whatsappConfirmBtn" href="https://wa.me/919680038787?text=Hi%20Workout%20Adda%20Elite!%20I%20would%20like%20to%20claim%20my%20Free%20VIP%20Trial%20Pass." target="_blank" rel="noopener noreferrer"
+                                class="w-full sm:w-auto px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-obsidian font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-500/20">
+                                <i class="fa-brands fa-whatsapp text-base"></i>
+                                <span>Confirm on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Confirmation Feedback Banner (Hidden until form submit) -->
+                    <div id="passSuccessBanner" class="hidden mt-4 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm flex items-center justify-between gap-3">
+                        <span><i class="fa-solid fa-circle-check mr-2"></i> Your VIP Pass is ready! Click <strong>Confirm on WhatsApp</strong> above to lock in your slot.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location, Hours & Direct Contact Section -->
+    <section id="location" class="py-24 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10 items-stretch">
+                
+                <!-- Address & Contact Details -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8 reveal">
+                    <div class="space-y-4">
+                        <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.25em]">Visit The Sanctuary</span>
+                        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+                            Prime Jaipur Location
+                        </h2>
+                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Conveniently situated near Mahesh Nagar Phatak and Gopal Pura Mode with effortless access for morning and late-evening workouts.
+                        </p>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm">Club Address</h3>
+                                <p class="text-zinc-300 text-sm mt-1 leading-relaxed">
+                                    Pn 114 B, Krishna Nagar-B, Avadhpuri, Mahesh Nagar, Gopal Pura Mode, Jaipur, Rajasthan 302015
+                                </p>
+                                <button id="copyAddressBtn" class="mt-2 inline-flex items-center gap-1.5 text-xs text-gold-400 hover:text-gold-300 font-semibold">
+                                    <i class="fa-regular fa-copy"></i> <span id="copyAddressText">Copy Address &amp; Plus Code (VQHQ+V2)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm">Operating Hours</h3>
+                                <p class="text-zinc-300 text-sm mt-1">Open Daily · Closes 10:00 PM</p>
+                                <p class="text-xs text-emerald-400 mt-1 font-medium">Flexible morning &amp; evening batches available</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm">Front Desk &amp; Membership Enquiries</h3>
+                                <a href="tel:+919680038787" class="text-lg font-bold text-gold-400 hover:text-gold-300 block mt-0.5">
+                                    096800 38787
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Workout+Adda+Elite+The+Luxury+Gym+Mahesh+Nagar+Jaipur" target="_blank" rel="noopener noreferrer"
+                            class="flex-1 btn-gold text-obsidian font-bold py-3.5 px-6 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span>Get Google Maps Directions</span>
+                        </a>
+                        <a href="tel:+919680038787"
+                            class="flex-1 py-3.5 px-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-center text-sm flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-solid fa-phone text-gold-400"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Styled Map Card -->
+                <div class="lg:col-span-7 reveal reveal-delay-2">
+                    <div class="h-full min-h-[420px] rounded-3xl overflow-hidden border border-white/10 bg-charcoal relative flex flex-col justify-between p-6 sm:p-8 luxury-grid">
+                        <!-- Embedded Google Map Iframe with Dark Filter -->
+                        <iframe 
+                            title="Workout Adda Elite Jaipur Location Map"
+                            src="https://maps.google.com/maps?q=Pn%20114%20B,%20Krishna%20Nagar-B,%20Avadhpuri,%20Mahesh%20Nagar,%20Gopal%20Pura%20Mode,%20Jaipur,%20Rajasthan%20302015&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            class="absolute inset-0 w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-[95%] opacity-80"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <div class="relative z-10 pointer-events-none">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-500/30 text-xs font-bold text-gold-300 shadow-xl">
+                                <i class="fa-solid fa-map-pin text-gold-400"></i> Plus Code: VQHQ+V2 Jaipur, Rajasthan
+                            </span>
+                        </div>
+
+                        <div class="relative z-10 glass-card rounded-2xl p-5 mt-auto max-w-md shadow-2xl">
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-white font-bold text-base">WORKOUT ADDA ELITE</p>
+                                    <p class="text-zinc-400 text-xs mt-0.5">Mahesh Nagar · Gopal Pura Mode, Jaipur</p>
+                                    <div class="flex items-center gap-1.5 text-gold-400 text-xs font-semibold mt-2">
+                                        <span>4.9</span>
+                                        <span>★★★★★</span>
+                                        <span class="text-zinc-400 font-normal">(169 Reviews)</span>
+                                    </div>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Workout+Adda+Elite+The+Luxury+Gym+Mahesh+Nagar+Jaipur" target="_blank" rel="noopener noreferrer"
+                                    class="w-12 h-12 rounded-xl btn-gold text-obsidian flex items-center justify-center text-lg shrink-0 shadow-lg" aria-label="Open in Google Maps">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Footer -->
+    <footer class="bg-charcoal border-t border-white/10 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-obsidian font-display font-extrabold text-lg">
+                            W
+                        </div>
+                        <div>
+                            <span class="font-display font-bold text-lg tracking-wider text-white block leading-none">
+                                WORKOUT ADDA <span class="text-gold-400">ELITE</span>
+                            </span>
+                            <span class="text-[10px] uppercase tracking-[0.25em] text-zinc-400 block mt-1">
+                                The Luxury Gym
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed max-w-sm">
+                        Redefining Fitness, Redefining You. Jaipur’s 4.9-star luxury training and recovery club in Mahesh Nagar &amp; Gopal Pura Mode.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#experience" class="hover:text-gold-400 transition-colors">The Elite Experience</a></li>
+                        <li><a href="#facilities" class="hover:text-gold-400 transition-colors">Modern Facilities</a></li>
+                        <li><a href="#recovery" class="hover:text-gold-400 transition-colors">Ice &amp; Steam Suite</a></li>
+                        <li><a href="#reviews" class="hover:text-gold-400 transition-colors">Member Testimonials</a></li>
+                        <li><a href="#vip-pass" class="hover:text-gold-400 transition-colors">Free VIP Trial Pass</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contact &amp; Hours</h4>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Pn 114 B, Krishna Nagar-B, Avadhpuri, Mahesh Nagar, Gopal Pura Mode, Jaipur, Rajasthan 302015
+                    </p>
+                    <p class="text-sm text-zinc-300 font-medium">
+                        Phone: <a href="tel:+919680038787" class="text-gold-400 hover:underline">096800 38787</a>
+                    </p>
+                    <p class="text-xs text-zinc-500">Open Daily · Closes 10:00 PM</p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="currentYear"></span> Workout Adda Elite – The Luxury Gym. All rights reserved.</p>
+                <p>Digital Experience Crafted by <span class="text-gold-400 font-semibold">NexoraWeb</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Quick Concierge Button -->
+    <a href="https://wa.me/919680038787?text=Hello%20Workout%20Adda%20Elite!%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20about%20membership%20plans%20and%20a%20free%20trial." 
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-obsidian flex items-center justify-center text-2xl shadow-2xl shadow-emerald-500/30 hover:scale-110 transition-transform">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Set Current Year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // 2. Live Jaipur Open/Closed Status Indicator (Closes 10:00 PM / 22:00)
+            const updateLiveGymStatus = () => {
+                const now = new Date();
+                const hour = now.getHours();
+                const statusText = document.getElementById('liveStatusText');
+                const statusDot = document.getElementById('liveStatusDot');
+                const statusPing = document.getElementById('liveStatusPing');
+
+                if (hour >= 6 && hour < 22) {
+                    statusText.textContent = 'Open Now · Closes 10:00 PM';
+                    statusText.className = 'font-medium text-emerald-400';
+                    statusDot.className = 'relative inline-flex rounded-full h-2 w-2 bg-emerald-500';
+                    statusPing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75';
+                } else {
+                    statusText.textContent = 'Opens 6:00 AM · Closes 10:00 PM';
+                    statusText.className = 'font-medium text-amber-400';
+                    statusDot.className = 'relative inline-flex rounded-full h-2 w-2 bg-amber-500';
+                    statusPing.className = 'hidden';
+                }
+            };
+            updateLiveGymStatus();
+
+            // 3. Mobile Navigation Drawer Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 4. Scroll Reveal Observer
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 5. Animated Number Counters
+            const counters = document.querySelectorAll('.counter');
+            const animateCounter = (counter) => {
+                const target = parseFloat(counter.getAttribute('data-target'));
+                const decimals = parseInt(counter.getAttribute('data-decimals') || '0', 10);
+                const duration = 1800;
+                const startTime = performance.now();
+
+                const step = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease out cubic
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const currentVal = target * eased;
+                    counter.textContent = currentVal.toFixed(decimals);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        counter.textContent = target.toFixed(decimals);
+                    }
+                };
+                requestAnimationFrame(step);
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(c => counterObserver.observe(c));
+
+            // 6. Subtle 3D Hover Tilt Effect on Desktop Cards
+            const tiltCards = document.querySelectorAll('.tilt-card');
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    if (window.innerWidth < 1024) return;
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -4;
+                    const rotateY = ((x - centerX) / centerX) * 4;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                });
+            });
+
+            // 7. Interactive VIP Pass Generator & Live WhatsApp Link Builder
+            const vipForm = document.getElementById('vipPassForm');
+            const guestNameInput = document.getElementById('guestName');
+            const guestPhoneInput = document.getElementById('guestPhone');
+            const guestGoalSelect = document.getElementById('guestGoal');
+            const guestTimeSelect = document.getElementById('guestTime');
+
+            const passHolderName = document.getElementById('passHolderName');
+            const passHolderGoal = document.getElementById('passHolderGoal');
+            const passHolderTime = document.getElementById('passHolderTime');
+            const whatsappConfirmBtn = document.getElementById('whatsappConfirmBtn');
+            const passSuccessBanner = document.getElementById('passSuccessBanner');
+
+            const updatePassPreview = () => {
+                const name = guestNameInput.value.trim() || 'Valued Guest';
+                const phone = guestPhoneInput.value.trim();
+                const goal = guestGoalSelect.value;
+                const time = guestTimeSelect.value;
+
+                passHolderName.textContent = name;
+                passHolderGoal.textContent = goal;
+                passHolderTime.textContent = time;
+
+                const message = `Hello Workout Adda Elite! I generated my Free VIP Trial Pass on your website.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone || 'Provided on chat')}%0A*Goal:* ${encodeURIComponent(goal)}%0A*Preferred Time:* ${encodeURIComponent(time)}%0A%0APlease confirm my complimentary session!`;
+                whatsappConfirmBtn.href = `https://wa.me/919680038787?text=${message}`;
+            };
+
+            [guestNameInput, guestPhoneInput, guestGoalSelect, guestTimeSelect].forEach(el => {
+                el.addEventListener('input', updatePassPreview);
+                el.addEventListener('change', updatePassPreview);
+            });
+
+            vipForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                updatePassPreview();
+                passSuccessBanner.classList.remove('hidden');
+                const passCard = document.getElementById('digitalPassCard');
+                passCard.classList.add('ring-2', 'ring-gold-400');
+                passCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+
+            // 8. Copy Address to Clipboard (Iframe-Safe Fallback)
+            const copyAddressBtn = document.getElementById('copyAddressBtn');
+            const copyAddressText = document.getElementById('copyAddressText');
+            copyAddressBtn.addEventListener('click', () => {
+                const fullAddress = 'Workout Adda Elite - The Luxury Gym, Pn 114 B, Krishna Nagar-B, Avadhpuri, Mahesh Nagar, Gopal Pura Mode, Jaipur, Rajasthan 302015 (Plus Code: VQHQ+V2)';
+                const tempInput = document.createElement('textarea');
+                tempInput.value = fullAddress;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                copyAddressText.textContent = 'Copied to Clipboard!';
+                setTimeout(() => {
+                    copyAddressText.textContent = 'Copy Address & Plus Code (VQHQ+V2)';
+                }, 2500);
+            });
+        });
+    </script>
+</body>
+</html>
